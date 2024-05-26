@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>16 Implementation and migration</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>16 Implementation and migration</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-implementation_migration"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_implementation_migration" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/id-aecc53feb8bb493c91c248fe7f1c467d.png" alt="16 Implementation and migration" usemap="#id-aecc53feb8bb493c91c248fe7f1c467dmap"/>
+			   <map name="id-aecc53feb8bb493c91c248fe7f1c467dmap">
+				  		<area shape="rect" coords="994,10,1186,89" href="../elements/id-71a20f415e784875b81e5a4e3f837fe2.html"  target="element">
+				  		<area shape="rect" coords="826,121,1091,191" href="../elements/id-308f9e4a8bb44702b970ed73f48814f2.html"  target="element">
+				  		<area shape="rect" coords="598,121,791,191" href="../elements/id-7619bcf9b149454cad28aa4a1474cd1e.html"  target="element">
+				  		<area shape="rect" coords="742,10,911,89" href="../elements/id-3a86ba2c2896409d8e97372161429c83.html"  target="element">
+				  		<area shape="rect" coords="370,121,563,191" href="../elements/id-bb610490e63d40c39322a65dd41d52ab.html"  target="element">
+				  		<area shape="rect" coords="514,10,683,89" href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html"  target="element">
+				  		<area shape="rect" coords="22,121,247,191" href="../elements/id-dec4eaf17d8b433695112e9684f53f92.html"  target="element">
+				  		<area shape="rect" coords="228,10,395,89" href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html"  target="element">
+				  		<area shape="rect" coords="10,10,143,89" href="../elements/id-56bcd4bdc2504df3aefee040d4a18480.html"  target="element">
+				  		<area shape="rect" coords="982,214,1138,269" href="../elements/id-13c08fa2964b4ce1b96888b9b9c97cb3.html"  target="element">
+				  		<area shape="rect" coords="742,214,862,269" href="../elements/id-ceef335333a9477f8840b380b07f2fca.html"  target="element">
+				  		<area shape="rect" coords="514,214,634,269" href="../elements/id-ffb89cef22d148ce84af2b3fcab16bc3.html"  target="element">
+				  		<area shape="rect" coords="310,214,430,269" href="../elements/id-eb0a438c5ad043468d0d00e3edcdd078.html"  target="element">
+				  		<area shape="rect" coords="178,214,298,269" href="../elements/id-993bd13cd5be408e91cc0c9c5bc8c241.html"  target="element">
+				  		<area shape="rect" coords="23,214,143,269" href="../elements/id-c9d2a793665e4efda13cb5bc2b22cc21.html"  target="element">
+				  		<area shape="rect" coords="1066,334,1186,389" href="../elements/id-62f1d029d5584872a1c6d039af71fe8c.html"  target="element">
+				  		<area shape="rect" coords="10,334,130,389" href="../elements/id-5fbf2872a6fa4008b53b04bf87b67547.html"  target="element">
+				  				<area shape="rect" coords="154,334,335,395" href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html"  target="element">
+				  				<area shape="rect" coords="856,334,1037,395" href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html"  target="element">
+				  				<area shape="rect" coords="619,334,800,395" href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html"  target="element">
+				  				<area shape="rect" coords="382,334,563,395" href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html"  target="element">
+
+				  		<area shape="rect" coords="142,298,1043,407" href="../elements/id-ddfe40e9dd26498d8f688fefe5e7a0fe.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/id-ddfe40e9dd26498d8f688fefe5e7a0fe.html" target="element"> Creation of a platform for practical sessions </a> </td>
+											    <td> <a href="../elements/id-ddfe40e9dd26498d8f688fefe5e7a0fe.html" target="element" class="i18n-elementtype-WorkPackage">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html" target="element"> Web-app integration </a> </td>
+													    <td> <a href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html" target="element"> Setting up automatic task checking </a> </td>
+													    <td> <a href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html" target="element"> Integration of the platform into the learning process </a> </td>
+													    <td> <a href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element"> Setting up the platform infrastructure on GitHub </a> </td>
+													    <td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/id-5fbf2872a6fa4008b53b04bf87b67547.html" target="element"> Start of the project </a> </td>
+											    <td> <a href="../elements/id-5fbf2872a6fa4008b53b04bf87b67547.html" target="element" class="i18n-elementtype-ImplementationEvent">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-62f1d029d5584872a1c6d039af71fe8c.html" target="element"> Completion of the project </a> </td>
+											    <td> <a href="../elements/id-62f1d029d5584872a1c6d039af71fe8c.html" target="element" class="i18n-elementtype-ImplementationEvent">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-c9d2a793665e4efda13cb5bc2b22cc21.html" target="element"> Project plan </a> </td>
+											    <td> <a href="../elements/id-c9d2a793665e4efda13cb5bc2b22cc21.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-993bd13cd5be408e91cc0c9c5bc8c241.html" target="element"> Organization on GitHub </a> </td>
+											    <td> <a href="../elements/id-993bd13cd5be408e91cc0c9c5bc8c241.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-eb0a438c5ad043468d0d00e3edcdd078.html" target="element"> Set of repositories </a> </td>
+											    <td> <a href="../elements/id-eb0a438c5ad043468d0d00e3edcdd078.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-ffb89cef22d148ce84af2b3fcab16bc3.html" target="element"> Expanded web application </a> </td>
+											    <td> <a href="../elements/id-ffb89cef22d148ce84af2b3fcab16bc3.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-ceef335333a9477f8840b380b07f2fca.html" target="element"> Pipeline for checking </a> </td>
+											    <td> <a href="../elements/id-ceef335333a9477f8840b380b07f2fca.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-13c08fa2964b4ce1b96888b9b9c97cb3.html" target="element"> Platform for practical sessions </a> </td>
+											    <td> <a href="../elements/id-13c08fa2964b4ce1b96888b9b9c97cb3.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-56bcd4bdc2504df3aefee040d4a18480.html" target="element"> Initial state </a> </td>
+											    <td> <a href="../elements/id-56bcd4bdc2504df3aefee040d4a18480.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element"> Organization for practical training </a> </td>
+											    <td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-dec4eaf17d8b433695112e9684f53f92.html" target="element"> Lack of infrastructure to preserve course materials </a> </td>
+											    <td> <a href="../elements/id-dec4eaf17d8b433695112e9684f53f92.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html" target="element"> A real project for completing tasks </a> </td>
+											    <td> <a href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-bb610490e63d40c39322a65dd41d52ab.html" target="element"> Lack of real context for tasks </a> </td>
+											    <td> <a href="../elements/id-bb610490e63d40c39322a65dd41d52ab.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-3a86ba2c2896409d8e97372161429c83.html" target="element"> Automatic task checking </a> </td>
+											    <td> <a href="../elements/id-3a86ba2c2896409d8e97372161429c83.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-7619bcf9b149454cad28aa4a1474cd1e.html" target="element"> Ineffective checking of solutions </a> </td>
+											    <td> <a href="../elements/id-7619bcf9b149454cad28aa4a1474cd1e.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-308f9e4a8bb44702b970ed73f48814f2.html" target="element"> Lack of practice opportunities in a real development environment </a> </td>
+											    <td> <a href="../elements/id-308f9e4a8bb44702b970ed73f48814f2.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-71a20f415e784875b81e5a4e3f837fe2.html" target="element"> Practical sessions using the platform </a> </td>
+											    <td> <a href="../elements/id-71a20f415e784875b81e5a4e3f837fe2.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/id-c654068ee1f542f5b16c7b7097c09d23.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c654068ee1f542f5b16c7b7097c09d23.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-ddfe40e9dd26498d8f688fefe5e7a0fe.html" target="element"> Creation of a platform for practical sessions </a> </td>
+																		<td> <a href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html" target="element"> Web-app integration </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-4a61fae71cae4724a14cd3165667485c.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-4a61fae71cae4724a14cd3165667485c.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-ddfe40e9dd26498d8f688fefe5e7a0fe.html" target="element"> Creation of a platform for practical sessions </a> </td>
+																		<td> <a href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html" target="element"> Integration of the platform into the learning process </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-988e58e42e0b49058815090f3b7c7b6e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-988e58e42e0b49058815090f3b7c7b6e.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-ddfe40e9dd26498d8f688fefe5e7a0fe.html" target="element"> Creation of a platform for practical sessions </a> </td>
+																		<td> <a href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html" target="element"> Setting up automatic task checking </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-3125e6d4e93e46909b87f19d1d88e11e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3125e6d4e93e46909b87f19d1d88e11e.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-ddfe40e9dd26498d8f688fefe5e7a0fe.html" target="element"> Creation of a platform for practical sessions </a> </td>
+																		<td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element"> Setting up the platform infrastructure on GitHub </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-95bbd7ba7926449ababa4e523feadc4b.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-95bbd7ba7926449ababa4e523feadc4b.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html" target="element"> Web-app integration </a> </td>
+																				<td> <a href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html" target="element"> Setting up automatic task checking </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-2b4d1653907c44a896e7b021e20b3699.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-2b4d1653907c44a896e7b021e20b3699.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html" target="element"> Web-app integration </a> </td>
+																				<td> <a href="../elements/id-eb0a438c5ad043468d0d00e3edcdd078.html" target="element"> Set of repositories </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-9125d6fad1534f6383a585db219ffe1c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-9125d6fad1534f6383a585db219ffe1c.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html" target="element"> Web-app integration </a> </td>
+																				<td> <a href="../elements/id-ffb89cef22d148ce84af2b3fcab16bc3.html" target="element"> Expanded web application </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-f22ee3f96f42488d996e8778daa934f9.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f22ee3f96f42488d996e8778daa934f9.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html" target="element"> Setting up automatic task checking </a> </td>
+																				<td> <a href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html" target="element"> Integration of the platform into the learning process </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-485665cf6de94720a30c990b4bf84c9d.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-485665cf6de94720a30c990b4bf84c9d.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html" target="element"> Setting up automatic task checking </a> </td>
+																				<td> <a href="../elements/id-ceef335333a9477f8840b380b07f2fca.html" target="element"> Pipeline for checking </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-3f1aff711a6646bea361654601a53b94.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-3f1aff711a6646bea361654601a53b94.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-4f8a8e20391f4c36a6c88bdb2ead07be.html" target="element"> Setting up automatic task checking </a> </td>
+																				<td> <a href="../elements/id-ffb89cef22d148ce84af2b3fcab16bc3.html" target="element"> Expanded web application </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-1df7f281564347549da847ed44e007a0.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-1df7f281564347549da847ed44e007a0.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html" target="element"> Integration of the platform into the learning process </a> </td>
+																				<td> <a href="../elements/id-62f1d029d5584872a1c6d039af71fe8c.html" target="element"> Completion of the project </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-263a0e96cab24017942cb068c7ca5fc7.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-263a0e96cab24017942cb068c7ca5fc7.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html" target="element"> Integration of the platform into the learning process </a> </td>
+																				<td> <a href="../elements/id-13c08fa2964b4ce1b96888b9b9c97cb3.html" target="element"> Platform for practical sessions </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-2fb70e343ba74301b33d8eaa2451ead6.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-2fb70e343ba74301b33d8eaa2451ead6.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-c505696d8767464c8ce7a331acd1c7de.html" target="element"> Integration of the platform into the learning process </a> </td>
+																				<td> <a href="../elements/id-ceef335333a9477f8840b380b07f2fca.html" target="element"> Pipeline for checking </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-82c88f6cf9834a43a0a3993c6d6a3e1c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-82c88f6cf9834a43a0a3993c6d6a3e1c.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element"> Setting up the platform infrastructure on GitHub </a> </td>
+																				<td> <a href="../elements/id-c9b6b9056c134142be82ca3940abbc82.html" target="element"> Web-app integration </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-1a423aff505d4da985cca8e7e1708d91.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-1a423aff505d4da985cca8e7e1708d91.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element"> Setting up the platform infrastructure on GitHub </a> </td>
+																				<td> <a href="../elements/id-c9d2a793665e4efda13cb5bc2b22cc21.html" target="element"> Project plan </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-d6fec5275f03442f842d03e0f4692658.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-d6fec5275f03442f842d03e0f4692658.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element"> Setting up the platform infrastructure on GitHub </a> </td>
+																				<td> <a href="../elements/id-993bd13cd5be408e91cc0c9c5bc8c241.html" target="element"> Organization on GitHub </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-5453da78ea4b41259f017ab23ea21be8.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-5453da78ea4b41259f017ab23ea21be8.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element"> Setting up the platform infrastructure on GitHub </a> </td>
+																				<td> <a href="../elements/id-eb0a438c5ad043468d0d00e3edcdd078.html" target="element"> Set of repositories </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/id-bdc0d00ac8774f5a9b8d1382a4d3071b.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-bdc0d00ac8774f5a9b8d1382a4d3071b.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-5fbf2872a6fa4008b53b04bf87b67547.html" target="element"> Start of the project </a> </td>
+																		<td> <a href="../elements/id-2c1a4c18a5db4a00a50c04d78274326c.html" target="element"> Setting up the platform infrastructure on GitHub </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c09619ce500e443cad54ae854487aa43.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c09619ce500e443cad54ae854487aa43.html" target="element" class="i18n-elementtype-AccessRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-5fbf2872a6fa4008b53b04bf87b67547.html" target="element"> Start of the project </a> </td>
+																		<td> <a href="../elements/id-c9d2a793665e4efda13cb5bc2b22cc21.html" target="element"> Project plan </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-b411f6d193ee47408deb1222ac1ca0c0.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-b411f6d193ee47408deb1222ac1ca0c0.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-993bd13cd5be408e91cc0c9c5bc8c241.html" target="element"> Organization on GitHub </a> </td>
+																		<td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element"> Organization for practical training </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-b460976715cc40528f982940385a1221.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-b460976715cc40528f982940385a1221.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-eb0a438c5ad043468d0d00e3edcdd078.html" target="element"> Set of repositories </a> </td>
+																		<td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element"> Organization for practical training </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-2db476a539494433913af359c87cf4b4.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-2db476a539494433913af359c87cf4b4.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-ffb89cef22d148ce84af2b3fcab16bc3.html" target="element"> Expanded web application </a> </td>
+																		<td> <a href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html" target="element"> A real project for completing tasks </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-225c213bb0844fe09f0e5a0267df3209.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-225c213bb0844fe09f0e5a0267df3209.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-ceef335333a9477f8840b380b07f2fca.html" target="element"> Pipeline for checking </a> </td>
+																		<td> <a href="../elements/id-3a86ba2c2896409d8e97372161429c83.html" target="element"> Automatic task checking </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-14939d71cd474741b85ec7ff342f2c7e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-14939d71cd474741b85ec7ff342f2c7e.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-13c08fa2964b4ce1b96888b9b9c97cb3.html" target="element"> Platform for practical sessions </a> </td>
+																		<td> <a href="../elements/id-71a20f415e784875b81e5a4e3f837fe2.html" target="element"> Practical sessions using the platform </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-88833fec0d044538921f7907f3d3d607.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-88833fec0d044538921f7907f3d3d607.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-56bcd4bdc2504df3aefee040d4a18480.html" target="element"> Initial state </a> </td>
+																		<td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element"> Organization for practical training </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-566c392743ac455eb82e04d9801ed594.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-566c392743ac455eb82e04d9801ed594.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-56bcd4bdc2504df3aefee040d4a18480.html" target="element"> Initial state </a> </td>
+																		<td> <a href="../elements/id-dec4eaf17d8b433695112e9684f53f92.html" target="element"> Lack of infrastructure to preserve course materials </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-3922a2f99e31481380462568d318d45d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3922a2f99e31481380462568d318d45d.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element"> Organization for practical training </a> </td>
+																		<td> <a href="../elements/id-dec4eaf17d8b433695112e9684f53f92.html" target="element"> Lack of infrastructure to preserve course materials </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-526f995675be421bbf1f5c0bd22ce158.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-526f995675be421bbf1f5c0bd22ce158.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element"> Organization for practical training </a> </td>
+																		<td> <a href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html" target="element"> A real project for completing tasks </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-dca30ff9068a414ebb9995c32e71beed.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-dca30ff9068a414ebb9995c32e71beed.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-67ab56214eb341fea2f7d8deee225c99.html" target="element"> Organization for practical training </a> </td>
+																		<td> <a href="../elements/id-bb610490e63d40c39322a65dd41d52ab.html" target="element"> Lack of real context for tasks </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-3e92d491a42b4d3f8a72f10a7b374c31.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3e92d491a42b4d3f8a72f10a7b374c31.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html" target="element"> A real project for completing tasks </a> </td>
+																		<td> <a href="../elements/id-bb610490e63d40c39322a65dd41d52ab.html" target="element"> Lack of real context for tasks </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-3b44cdf727954418a68f12b2b6bbdbaf.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3b44cdf727954418a68f12b2b6bbdbaf.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html" target="element"> A real project for completing tasks </a> </td>
+																		<td> <a href="../elements/id-3a86ba2c2896409d8e97372161429c83.html" target="element"> Automatic task checking </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-10f7a65528be4316b11314f4396d92df.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-10f7a65528be4316b11314f4396d92df.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-eae397a11e7a4d6cbf915cf7bb062db5.html" target="element"> A real project for completing tasks </a> </td>
+																		<td> <a href="../elements/id-7619bcf9b149454cad28aa4a1474cd1e.html" target="element"> Ineffective checking of solutions </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-522e559045cd450dbb3ad32be2479198.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-522e559045cd450dbb3ad32be2479198.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-3a86ba2c2896409d8e97372161429c83.html" target="element"> Automatic task checking </a> </td>
+																		<td> <a href="../elements/id-7619bcf9b149454cad28aa4a1474cd1e.html" target="element"> Ineffective checking of solutions </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-6286fc638fbb4fb6b020a07f09949aab.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-6286fc638fbb4fb6b020a07f09949aab.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-3a86ba2c2896409d8e97372161429c83.html" target="element"> Automatic task checking </a> </td>
+																		<td> <a href="../elements/id-71a20f415e784875b81e5a4e3f837fe2.html" target="element"> Practical sessions using the platform </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-f1f6d89a34844ae6bd5c84929991b8d1.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-f1f6d89a34844ae6bd5c84929991b8d1.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-3a86ba2c2896409d8e97372161429c83.html" target="element"> Automatic task checking </a> </td>
+																		<td> <a href="../elements/id-308f9e4a8bb44702b970ed73f48814f2.html" target="element"> Lack of practice opportunities in a real development environment </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-0f64ed4838524c5c8643877033f617e9.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-0f64ed4838524c5c8643877033f617e9.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-71a20f415e784875b81e5a4e3f837fe2.html" target="element"> Practical sessions using the platform </a> </td>
+																		<td> <a href="../elements/id-308f9e4a8bb44702b970ed73f48814f2.html" target="element"> Lack of practice opportunities in a real development environment </a> </td>
+																	</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
