@@ -1,7 +1,7 @@
 <archimate:ArchimateDiagramModel
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:archimate="http://www.archimatetool.com/archimate"
-    name="02 Мотивация"
+    name="02 Motivation"
     id="id-2df8348429cc47d5bf9bd2d42b62e209"
     viewpoint="motivation">
   <children
@@ -940,7 +940,7 @@
   <children
       xsi:type="archimate:DiagramModelArchimateObject"
       id="id-8f9d51ef22934038b72a061baa5ca1ce"
-      targetConnections="id-feffbfc5db8645a782dfc739ee0b65a1 id-34deb96630e8477faf2bf0ff2a032d5a id-5e1692b8e6ed4f768cb407020591abcd id-57d3bbdfd5bb4fe09ee492531ac739a7">
+      targetConnections="id-57d3bbdfd5bb4fe09ee492531ac739a7 id-5e1692b8e6ed4f768cb407020591abcd id-34deb96630e8477faf2bf0ff2a032d5a id-feffbfc5db8645a782dfc739ee0b65a1">
     <bounds
         x="24"
         y="624"

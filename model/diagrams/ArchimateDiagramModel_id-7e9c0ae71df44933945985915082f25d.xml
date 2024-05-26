@@ -1,12 +1,12 @@
 <archimate:ArchimateDiagramModel
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:archimate="http://www.archimatetool.com/archimate"
-    name="00 Карта представлений"
+    name="00 Views map"
     id="id-7e9c0ae71df44933945985915082f25d">
   <children
       xsi:type="archimate:DiagramModelGroup"
       id="id-081f7f746234431eafea388a4619ce7a"
-      name="Фаза A Видение архитектуры"
+      name="Phase A: Architecture Vision"
       textAlignment="1">
     <bounds
         x="12"
@@ -41,7 +41,7 @@
   <children
       xsi:type="archimate:DiagramModelGroup"
       id="id-fe476078dbbf4a50a68afa1b531f5d64"
-      name="Фаза B Бизнес-архитектура"
+      name="Phase B: Business Architecture"
       textAlignment="1">
     <bounds
         x="12"
@@ -124,7 +124,7 @@
   <children
       xsi:type="archimate:DiagramModelGroup"
       id="id-e52f24fd41c144469bd51571c9a51858"
-      name="Фаза С Архитектура системы"
+      name="Phase C: System Architecture"
       textAlignment="1">
     <bounds
         x="12"
@@ -159,7 +159,7 @@
   <children
       xsi:type="archimate:DiagramModelGroup"
       id="id-23b5f41ea8b340b589db9b6225eeca52"
-      name="Фаза D Архитектура инфраструктуры"
+      name="Phase D: Technology Architecture"
       textAlignment="1">
     <bounds
         x="420"
@@ -206,7 +206,7 @@
   <children
       xsi:type="archimate:DiagramModelGroup"
       id="id-9d3cd4d41c52461d98296da722b45a91"
-      name="Фаза E Определение возможностей"
+      name="Phase E: Opportunities and Solutions"
       textAlignment="1">
     <bounds
         x="420"
@@ -229,7 +229,7 @@
   <children
       xsi:type="archimate:DiagramModelGroup"
       id="id-ae5b3e5431d54306a51a807b59ffec66"
-      name="Фаза F Планирование миграции"
+      name="Phase F: Migration Planning"
       textAlignment="1">
     <bounds
         x="420"

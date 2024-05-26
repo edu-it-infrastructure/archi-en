@@ -1,7 +1,7 @@
 <archimate:ArchimateDiagramModel
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:archimate="http://www.archimatetool.com/archimate"
-    name="16 Внедрение и миграция"
+    name="16 Implementation and migration"
     id="id-aecc53feb8bb493c91c248fe7f1c467d"
     viewpoint="implementation_migration">
   <children

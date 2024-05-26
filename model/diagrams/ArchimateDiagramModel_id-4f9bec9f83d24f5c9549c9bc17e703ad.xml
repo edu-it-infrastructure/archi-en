@@ -1,7 +1,7 @@
 <archimate:ArchimateDiagramModel
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:archimate="http://www.archimatetool.com/archimate"
-    name="05 Процессы - Учебный процесс"
+    name="05 Processes - Educational process"
     id="id-4f9bec9f83d24f5c9549c9bc17e703ad"
     viewpoint="business_process_cooperation">
   <children
@@ -209,21 +209,21 @@
       targetConnections="id-b88578a18dda4190956c3bb7d512482e">
     <sourceConnections
         xsi:type="archimate:DiagramModelArchimateConnection"
-        id="id-411c4eb0beac43098d5c185f54b06c26"
-        source="id-9799c0c41e2741dcb6f9b05b8a36f1de"
-        target="id-ec2998f6a8634381902e8d0fe619ab45">
-      <archimateRelationship
-          xsi:type="archimate:TriggeringRelationship"
-          href="TriggeringRelationship_id-eb9fb9e784864c04a0c20426635bdffa.xml#id-eb9fb9e784864c04a0c20426635bdffa"/>
-    </sourceConnections>
-    <sourceConnections
-        xsi:type="archimate:DiagramModelArchimateConnection"
         id="id-a783ab4379b041fcb6b272291d7583c9"
         source="id-9799c0c41e2741dcb6f9b05b8a36f1de"
         target="id-750cd3de974b4517aabd6c2aae6fbab3">
       <archimateRelationship
           xsi:type="archimate:TriggeringRelationship"
           href="TriggeringRelationship_id-6af9cfdb572b4a50838b5e738d6b4839.xml#id-6af9cfdb572b4a50838b5e738d6b4839"/>
+    </sourceConnections>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-411c4eb0beac43098d5c185f54b06c26"
+        source="id-9799c0c41e2741dcb6f9b05b8a36f1de"
+        target="id-ec2998f6a8634381902e8d0fe619ab45">
+      <archimateRelationship
+          xsi:type="archimate:TriggeringRelationship"
+          href="TriggeringRelationship_id-eb9fb9e784864c04a0c20426635bdffa.xml#id-eb9fb9e784864c04a0c20426635bdffa"/>
     </sourceConnections>
     <bounds
         x="744"

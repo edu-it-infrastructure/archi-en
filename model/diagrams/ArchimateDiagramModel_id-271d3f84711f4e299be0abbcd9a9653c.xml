@@ -1,7 +1,7 @@
 <archimate:ArchimateDiagramModel
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:archimate="http://www.archimatetool.com/archimate"
-    name="14 Поток создания ценности"
+    name="14 Value stream"
     id="id-271d3f84711f4e299be0abbcd9a9653c">
   <children
       xsi:type="archimate:DiagramModelArchimateObject"
