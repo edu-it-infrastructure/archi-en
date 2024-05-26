@@ -1,8 +1,8 @@
-# archi
-ArchiMate модель архитектуры платформы для практических занятий
+# archi-en
+ArchiMate model of the architecture for the practical sessions platform 
 
-В каталоге model находится исходный код ArchiMate-модели
+The model catalog contains the source code of the ArchiMate model
 
-В каталоге view-images расположены представления модели в виде изображений в формате PNG
+The view-images catalog contains representations of the model as images in PNG format
 
-[Просмотр модели онлайн](https://edu-it-infrastructure.github.io/archi/)
+[Viewing the model online](https://edu-it-infrastructure.github.io/archi-en/)
